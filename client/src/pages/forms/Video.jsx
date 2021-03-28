@@ -157,7 +157,10 @@ const Video = ({ history }) => {
 
               {formData.topics &&
                 formData.topics.map((topic) => (
-                  <button className={Style.topicButton + ' mr-2 mt-2'}>
+                  <button
+                    onClick={(e) => e.preventDefault()}
+                    className={Style.topicButton + ' mr-2 mt-2'}
+                  >
                     Topic: {topic.name}
                     <span
                       style={{ fontSize: 12, borderRadius: '50%' }}
